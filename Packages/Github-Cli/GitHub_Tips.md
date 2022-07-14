@@ -16,6 +16,8 @@ Host GitHub
 if `gh clone <repo>` don't work.
 Need to use following:
 `gh config set git_protocol https -h github.com`
+or
+`git clone https://github.com/user/repo.git`
 
 ## Mac OS
 
@@ -30,3 +32,7 @@ use the command below to list all repos on GitHub:
 use the command below to create a new repo and push locally committed to repo
 `gh repo create <repo name> --public --description="<repo descr>"`
 `git push origin master --verbose`
+
+To clone the latest from the repo
+`gh repo clone user/repo "--depth 1 --recurse-submodules --shallow-submodules"`
+`git clone --depth 1 --recurse-submodules --shallow-submodules https://github.com/user/repo.git`
